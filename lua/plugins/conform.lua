@@ -34,6 +34,15 @@ return {
                 go = { "gofumpt", "goimports" },
                 java = { "google-java-format" },
                 c = { "clang-format" },
+                cpp = { "clang-format" },
+                php = { "php-cs-fixer" },
+                cs = { "csharpier" },
+                swift = { "swiftformat" },
+                xml = { "xmlformatter" },
+                dockerfile = { "dockfmt" },
+                sql = { "sqlfmt" },
+                terraform = { "terraform_fmt" },
+                text = { "trim_whitespace" },
             },
             format_on_save = {
                 -- These options will be passed to conform.format()
