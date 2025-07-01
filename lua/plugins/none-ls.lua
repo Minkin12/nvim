@@ -16,7 +16,7 @@ return {
   
           -- PHP
          
-          null_ls.builtins.formatting.phpcbf,
+          -- null_ls.builtins.formatting.phpcbf,
   
           -- HTML/CSS
         --   null_ls.builtins.diagnostics.stylelint,

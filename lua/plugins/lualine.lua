@@ -10,7 +10,7 @@ return {
 		options = {
 		  icons_enabled = true,
 		--   theme = "tokyonight",
-		  theme = "catppuccin",
+		--   theme = "catppuccin",
 		  disabled_filetypes = {
 			statusline = {},
 			winbar = {},
