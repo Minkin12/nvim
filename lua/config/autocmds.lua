@@ -1,7 +1,7 @@
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(e)
 		-- Set up keybindings
-		vim.keymap.set({ "n", "v" }, "<leader>e", function()
+		vim.keymap.set({ "n", "v" }, "<leader>c", function()
 			vim.lsp.buf.hover()
 		end, { buffer = e.buf, desc = "(vim.lsp.buf.hover) Show hover information" })
 		vim.keymap.set({ "n", "v" }, "<leader>rn", function()
