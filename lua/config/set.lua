@@ -26,7 +26,7 @@ vim.api.nvim_set_keymap('t', '<C-h>', '<C-\\><C-n><C-w>h', opts(true, true, "(<C
 vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-n><C-w>k', opts(true, true, "(<C-\\><C-n><C-w>k) Exit terminal mode and move to window above"))
 
 -- For function-based keymaps, we need to use vim.keymap.set
-vim.keymap.set('n', '<Leader>cw', function()
+vim.keymap.set('n', '<Leader>wc', function()
     vim.cmd('close')
 end, opts(true, true, "(:close) Close current window"))
 
