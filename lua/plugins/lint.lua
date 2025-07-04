@@ -13,12 +13,13 @@ return {
 			c = { "cppcheck" },
 			lua = { "luacheck" },
 			cpp = { "cppcheck" },
-			python = { "pylint" },
+			python = { "ruff" },
 			dockerfile = { "hadolint" },
 			go = { "golangcilint" },
 			java = { "semgrep" },
 			sql = { "sqlfluff" },
 			yaml = { "yamllint" },
+			php = { "phpstan" },
 			-- Add more as needed
 		}
 

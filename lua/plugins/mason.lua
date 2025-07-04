@@ -69,6 +69,7 @@ return {
 					"black",
 					"flake8",
 					"pylint",
+					"ruff",
 
 					-- Lua
 					"stylua",
@@ -77,6 +78,7 @@ return {
 					-- PHP
 					"phpcs",
 					"phpcbf",
+					"phpstan",
 
 					-- HTML/CSS
 					"stylelint",
