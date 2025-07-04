@@ -1,54 +1,55 @@
 vim.lsp.enable({
 	-- Shell / C / Infra
 	"bashls",
-	"clangd",
-	"docker_compose_language_service",
-	"dockerls",
+	--"clangd",
+	--"docker_compose_language_service",
+	--"dockerls",
 	"terraformls",
 	"helm_ls",
-  
+
 	-- Web & Styles
 	"cssls",
 	"html",
-	"emmet_language_server",
-  
+	--"emmet_language_server",
+
 	-- JavaScript / TypeScript
-	"ts_ls", 
+	"ts_ls",
 	"jsonls",
-  
+
 	-- Python
-	"pylsp",
-  
+	--"pylsp",
+	"pyright",
+
 	-- Lua
 	"lua_ls",
-  
+
 	-- Java
 	"jdtls",
-  
+
 	-- C#
-	"omnisharp", 
-  
+	"omnisharp",
+
 	-- PHP
-	"intelephense", 
-  
+	"intelephense",
+
 	-- YAML
-	"yamlls",
-  
+	--"yamlls",
+
 	-- Markdown
-	"marksman", 
-  
+	--"marksman",
+
 	-- XML
-	"lemminx",
-  
+	--"lemminx",
+
 	-- Swift
 	"sourcekit",
-  
+
 	-- SQL
-	"sqlls",
-  
+	--"sqlls",
+
 	-- Go
-	"gopls",
-  
+	--"gopls",
+
 	-- Grammar
 	"grammarly",
-  })
+})
