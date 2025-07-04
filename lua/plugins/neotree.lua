@@ -177,11 +177,11 @@ return {
 						-- this command supports BASH style brace expansion ("x{a,b,c}" -> xa,xb,xc). see `:h neo-tree-file-actions` for details
 						-- some commands may take optional config options, see `:h neo-tree-mappings` for details
 						config = {
-							show_path = "none", -- "none", "relative", "absolute"
+							show_path = "relative", -- "none", "relative", "absolute"
 						},
 					},
-					["d"] = "add_directory", -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
-					["D"] = "delete",
+					["D"] = "add_directory", -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
+					["d"] = "delete",
 					["r"] = "rename",
 					["y"] = "copy_to_clipboard",
 					["x"] = "cut_to_clipboard",
@@ -206,8 +206,8 @@ return {
 			filesystem = {
 				filtered_items = {
 					visible = false, -- when true, they will just be displayed differently than normal items
-					hide_dotfiles = true,
-					hide_gitignored = true,
+					hide_dotfiles = false,
+					hide_gitignored = false,
 					hide_hidden = true, -- only works on Windows for hidden files/directories
 					hide_by_name = {
 						--"node_modules"
@@ -235,7 +235,7 @@ return {
 					--               -- the current file is changed while the tree is open.
 					leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
 				},
-				group_empty_dirs = false, -- when true, empty folders will be grouped together
+				group_empty_dirs = true, -- when true, empty folders will be grouped together
 				hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
 				-- in whatever position is specified in window.position
 				-- "open_current",  -- netrw disabled, opening a directory opens within the
@@ -328,13 +328,13 @@ return {
 
 		vim.api.nvim_set_keymap(
 			"n",
-			"<leader>pv",
+			"<leader>e",
 			":Neotree filesystem toggle<CR>",
 			opts(true, true, "(:Neotree filesystem toggle) Toggle Neotree file explorer")
 		)
 		vim.api.nvim_set_keymap(
 			"n",
-			"<leader>ff",
+			"<leader>o",
 			":Neotree filesystem focus<CR>",
 			opts(true, true, "(:Neotree filesystem focus) Focus Neotree file explorer")
 		)

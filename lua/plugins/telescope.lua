@@ -63,13 +63,14 @@ return {
 			)
 			vim.keymap.set("n", "<leader>ct", function()
 				builtin.colorscheme({
-					colors = {
-						"rose-pine",
-						"nordic",
-						"monokai-pro",
-						"kanagawa",
-						"onenord",
-					},
+					-- colors = {
+					-- 	"rose-pine",
+					-- 	"nordic",
+					-- 	"monokai-pro",
+					-- 	"kanagawa",
+					-- 	"onenord",
+					-- 	"tokyoNight"
+					-- },
 					enable_preview = true,
 					ignore_builtins = true,
 				})
