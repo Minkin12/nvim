@@ -31,27 +31,27 @@ return {
 
 			vim.keymap.set(
 				"n",
-				"<leader>pf",
+				"<leader>ff",
 				builtin.find_files,
 				opts(true, true, "(builtin.find_files) Telescope find files")
 			)
 			vim.keymap.set(
 				"n",
-				"<leader>ps",
+				"<leader>fs",
 				builtin.live_grep,
 				opts(true, true, "(builtin.live_grep) Telescope live grep")
 			)
 			vim.keymap.set(
 				"n",
-				"<leader>gf",
+				"<leader>fg",
 				builtin.git_files,
 				opts(true, true, "(builtin.git_files) Telescope git files")
 			)
-			vim.keymap.set("n", "<leader>pws", function()
+			vim.keymap.set("n", "<leader>fws", function()
 				local word = vim.fn.expand("<cword>")
 				builtin.grep_string({ search = word })
 			end, opts(true, true, "(builtin.grep_string + <cword>) Search for word under cursor"))
-			vim.keymap.set("n", "<leader>pWs", function()
+			vim.keymap.set("n", "<leader>fWs", function()
 				local word = vim.fn.expand("<cWORD>")
 				builtin.grep_string({ search = word })
 			end, opts(true, true, "(builtin.grep_string + <cWORD>) Search for WORD under cursor"))

@@ -13,6 +13,13 @@ vim.api.nvim_set_keymap(
 	"<C-\\><C-n>:BufferLineCycleNext<CR>",
 	opts(true, true, "(<C-\\><C-n>:BufferLineCycleNext<CR>) Next buffer from terminal")
 )
+-- Exit terminal mode to normal mode
+vim.api.nvim_set_keymap(
+	"t",
+	"<leader>et",
+	"<C-\\><C-N>",
+	opts(true, true, "<C-\\><C-N> Exit terminal mode to normal mode")
+)
 
 -- Move line up or down 1
 vim.api.nvim_set_keymap("n", "<leader>mj", ":m .+1<CR>==", opts(true, true, "(:m .+1<CR>==) Move current line down"))
