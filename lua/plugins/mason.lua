@@ -1,4 +1,4 @@
--- See none-ls.lua for linters and formatters
+-- See conform.lua for linters and formatters
 return {
 	{
 		"williamboman/mason.nvim",
@@ -14,7 +14,7 @@ return {
 		opts = {
 			ensure_installed = {
 				-- Java
-				"jdtls",
+				--	"jdtls",
 
 				-- TypeScript / JavaScript
 				"ts_ls",
@@ -46,6 +46,9 @@ return {
 
 				-- XML
 				"lemminx",
+
+				-- English
+				"grammarly",
 			},
 			automatic_installation = true,
 		},
@@ -60,6 +63,8 @@ return {
 		config = function()
 			require("mason-null-ls").setup({
 				ensure_installed = {
+					--Java
+					"semgrep",
 
 					-- TypeScript / JavaScript
 					"eslint_d",

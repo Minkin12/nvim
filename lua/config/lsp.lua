@@ -17,7 +17,7 @@ vim.lsp.enable({
 	"jsonls",
 
 	-- Python
-	--"pylsp",
+	"pylsp",
 	"pyright",
 
 	-- Lua

@@ -22,6 +22,7 @@ return {
 				"php",
 				"python",
 				"swift",
+				"yaml"
 			},
 
 
