@@ -124,3 +124,7 @@ vim.keymap.set(
 		'(oif err != true {<CR>}<Esc>O.logger.Error("error", "error", err)<Esc>F.;i) Insert logger error handling'
 	)
 )
+
+-- Switch to previous buffer
+vim.keymap.set('n', '<Leader><Leader>', '<Cmd>b#<CR>', { desc = "Switch to previous buffer" })
+

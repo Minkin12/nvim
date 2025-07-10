@@ -25,6 +25,9 @@ return {
 				-- Lua
 				"lua_ls",
 
+				-- C++
+				"clangd",
+
 				-- C#
 				"omnisharp",
 
@@ -64,7 +67,11 @@ return {
 			require("mason-null-ls").setup({
 				ensure_installed = {
 					--Java
-					"semgrep",
+					-- "semgrep",
+
+					--C++
+					"cpplint",
+					"clang-format",
 
 					-- TypeScript / JavaScript
 					"eslint_d",

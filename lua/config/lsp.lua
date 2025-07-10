@@ -1,7 +1,8 @@
 vim.lsp.enable({
 	-- Shell / C / Infra
 	"bashls",
-	--"clangd",
+	"clangd",
+	"cmake",
 	--"docker_compose_language_service",
 	--"dockerls",
 	"terraformls",
@@ -33,7 +34,7 @@ vim.lsp.enable({
 	"intelephense",
 
 	-- YAML
-	--"yamlls",
+	"yamlls",
 
 	-- Markdown
 	--"marksman",
@@ -53,3 +54,17 @@ vim.lsp.enable({
 	-- Grammar
 	"grammarly",
 })
+
+--Manually edit sourcekit lsp so it doesn't attach to c++ files
+vim.lsp.config.sourcekit = {
+
+	cmd = { "sourcekit-lsp" },
+	filetypes = { "swift", "swiftpm", "playground", "manifest" },
+	root_markers = {
+		".git",
+		"Package.swift",
+		"Cartfile",
+		"Podfile",
+		"swift-tools-version",
+	},
+}

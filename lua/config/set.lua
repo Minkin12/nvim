@@ -19,6 +19,23 @@ vim.api.nvim_set_keymap('n', '<Leader>j', '<C-w>j', opts(true, true, "(<C-w>j) M
 vim.api.nvim_set_keymap('n', '<Leader>k', '<C-w>k', opts(true, true, "(<C-w>k) Move to window above"))
 vim.api.nvim_set_keymap('n', '<Leader>l', '<C-w>l', opts(true, true, "(<C-w>l) Move to right window"))
 vim.api.nvim_set_keymap('n', '<leader>vs', ':vsplit<CR>', opts(true, true, "(:vsplit) Create vertical split"))
+
+vim.keymap.set('n', '<Leader>wv', function()
+  local buf = vim.api.nvim_get_current_buf()
+  vim.cmd('vsplit')
+  vim.cmd('wincmd h')
+  vim.cmd('b#')
+  vim.cmd('wincmd l')
+end, { desc = "Split last two buffers into vertical windows" })
+
+vim.keymap.set('n', '<Leader>wh', function()
+  local buf = vim.api.nvim_get_current_buf()
+  vim.cmd('split')
+  vim.cmd('wincmd k')
+  vim.cmd('b#')
+  vim.cmd('wincmd j')
+end, { desc = "Split last two buffers into horizontal windows" })
+
 vim.api.nvim_set_keymap('n', '<leader>>', ':vertical resize +5<CR>', opts(true, true, "(:vertical resize +5) Increase vertical window size"))
 vim.api.nvim_set_keymap('n', '<leader><', ':vertical resize -5<CR>', opts(true, true, "(:vertical resize -5) Decrease vertical window size"))
 
