@@ -25,7 +25,7 @@ vim.lsp.enable({
 	"lua_ls",
 
 	-- Java
-	"jdtls",
+	--"jdtls",
 
 	-- C#
 	"omnisharp",
