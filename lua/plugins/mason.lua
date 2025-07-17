@@ -56,53 +56,53 @@ return {
 			automatic_installation = true,
 		},
 	},
-	{
-		"jay-babu/mason-null-ls.nvim",
-		lazy = false,
-		dependencies = {
-			"williamboman/mason.nvim",
-			"nvimtools/none-ls.nvim",
-		},
-		config = function()
-			require("mason-null-ls").setup({
-				ensure_installed = {
-					--Java
-					-- "semgrep",
+	-- {
+	-- 	"jay-babu/mason-null-ls.nvim",
+	-- 	lazy = true,
+	-- 	dependencies = {
+	-- 		"williamboman/mason.nvim",
+	-- 		"nvimtools/none-ls.nvim",
+	-- 	},
+	-- 	config = function()
+	-- 		require("mason-null-ls").setup({
+	-- 			ensure_installed = {
+	-- 				--Java
+	-- 				-- "semgrep",
 
-					--C++
-					"cpplint",
-					"clang-format",
+	-- 				--C++
+	-- 				"cpplint",
+	-- 				"clang-format",
 
-					-- TypeScript / JavaScript
-					"eslint_d",
-					"prettier",
+	-- 				-- TypeScript / JavaScript
+	-- 				"eslint_d",
+	-- 				"prettier",
 
-					-- Python
-					"black",
-					"flake8",
-					"pylint",
-					"ruff",
+	-- 				-- Python
+	-- 				"black",
+	-- 				"flake8",
+	-- 				"pylint",
+	-- 				"ruff",
 
-					-- Lua
-					"stylua",
-					"luacheck",
+	-- 				-- Lua
+	-- 				"stylua",
+	-- 				"luacheck",
 
-					-- PHP
-					"phpcs",
-					"phpcbf",
-					"phpstan",
+	-- 				-- PHP
+	-- 				"phpcs",
+	-- 				"phpcbf",
+	-- 				"phpstan",
 
-					-- HTML/CSS
-					"stylelint",
+	-- 				-- HTML/CSS
+	-- 				"stylelint",
 
-					-- Markdown linter
-					"markdownlint",
+	-- 				-- Markdown linter
+	-- 				"markdownlint",
 
-					-- YAML linter
-					"yamllint",
-				},
-				automatic_installation = false,
-			})
-		end,
-	},
+	-- 				-- YAML linter
+	-- 				"yamllint",
+	-- 			},
+	-- 			automatic_installation = false,
+	-- 		})
+	-- 	end,
+	-- },
 }
