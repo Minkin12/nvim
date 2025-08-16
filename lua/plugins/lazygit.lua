@@ -17,7 +17,9 @@ return {
         require("telescope").load_extension("lazygit")
     end,
     keys = {
-        { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+        -- { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+        -- would probably always want to launch via the project root of the current file
+        { "<leader>lg", "<cmd>LazyGitCurrent<cr>", desc = "LazyGit" }
     },
 
 }

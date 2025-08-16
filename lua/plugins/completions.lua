@@ -1,7 +1,20 @@
 return {
 	"saghen/blink.cmp",
 	-- optional: provides snippets for the snippet source
-	dependencies = { "rafamadriz/friendly-snippets" },
+
+	dependencies = {
+		"rafamadriz/friendly-snippets",
+	   "saghen/blink.compat",
+	   {
+		 "supermaven-inc/supermaven-nvim",
+		 opts = {
+		   keymaps = {
+			accept_suggestion = "<Tab>",
+		   },
+		   disable_inline_completion = false,
+		 },
+	   },
+   },
 
 	-- use a release tag to download pre-built binaries
 	version = "1.*",
@@ -25,7 +38,7 @@ return {
 		-- C-k: Toggle signature help (if signature.enabled = true)
 		--
 		-- See :h blink-cmp-config-keymap for defining your own keymap
-		keymap = { preset = "super-tab" },
+		keymap = { preset = "enter" },
 
 		appearance = {
 			-- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -34,7 +47,7 @@ return {
 		},
 
 		-- (Default) Only show the documentation popup when manually triggered
-		completion = { documentation = { auto_show = false } },
+		completion = { documentation = { auto_show = true } },
 
 		-- Default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
