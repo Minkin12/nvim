@@ -10,6 +10,8 @@ return {
 		 opts = {
 		   keymaps = {
 			accept_suggestion = "<Tab>",
+			clear_suggestion = "<C-]>",
+			accept_word = "<C-j>",
 		   },
 		   disable_inline_completion = false,
 		 },
